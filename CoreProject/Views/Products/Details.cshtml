@@ -1,0 +1,66 @@
+@model CoreProject.EntityFrameworkCore.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EAN)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EAN)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sku)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sku)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Brand)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Brand)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Materials)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Materials)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Grid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Grid)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreationDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Enable)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Enable)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ProductId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

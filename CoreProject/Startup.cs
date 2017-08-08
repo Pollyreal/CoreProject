@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using CoreProject.EntityFrameworkCore.Models;
 using Microsoft.EntityFrameworkCore;
+using CoreProject.EntityFrameworkCore;
 
 namespace CoreProject
 {
@@ -32,7 +33,7 @@ namespace CoreProject
             // Add framework services.
             services.AddMvc();
             var connection = Configuration.GetConnectionString("Default");
-            services.AddDbContext<BloggingContext>(options => options.UseSqlServer(connection));
+            services.AddDbContext<WarrantyContext>(options => options.UseSqlServer(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

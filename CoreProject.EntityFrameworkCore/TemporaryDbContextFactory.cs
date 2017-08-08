@@ -1,20 +1,19 @@
-﻿using CoreProject.EntityFrameworkCore.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using System.Reflection;
 
 namespace CoreProject.EntityFrameworkCore
 {
-    public class TemporaryDbContextFactory: IDbContextFactory<BloggingContext>
+    public class TemporaryDbContextFactory: IDbContextFactory<WarrantyContext>
     {
-        public BloggingContext Create(DbContextFactoryOptions options)
+        public WarrantyContext Create(DbContextFactoryOptions options)
         {
-            var builder = new DbContextOptionsBuilder<BloggingContext>();
+            var builder = new DbContextOptionsBuilder<WarrantyContext>();
 
             builder.UseSqlServer("Server=WLCNNB50703020\\SQLEXPRESS; Database=CoreProjectDb; Trusted_Connection=True;",
-                optionsBuilder => optionsBuilder.MigrationsAssembly(typeof(BloggingContext).GetTypeInfo().Assembly.GetName().Name));
+                optionsBuilder => optionsBuilder.MigrationsAssembly(typeof(WarrantyContext).GetTypeInfo().Assembly.GetName().Name));
 
-            return new BloggingContext(builder.Options);
+            return new WarrantyContext(builder.Options);
         }
     }
 }
