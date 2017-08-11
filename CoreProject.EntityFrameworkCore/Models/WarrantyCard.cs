@@ -28,10 +28,14 @@ namespace CoreProject.EntityFrameworkCore.Models
         /// 同意规则标识
         /// </summary>
         public Boolean PermitTandC { get; set; }
+        /// <summary>
+        /// 奖励保修时长
+        /// </summary>
+        public int BonusTime { get; set; }
         public DateTime CreationDate { get; set; }
         public Boolean Enable { get; set; }
 
-        public int RegionId { get; set; }
+        public int PurchaseRegionId { get; set; }
         ///// <summary>
         ///// 地区
         ///// </summary>
