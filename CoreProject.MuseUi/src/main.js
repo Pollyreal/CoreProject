@@ -5,9 +5,11 @@ import App from './App'
 import router from './router'
 import MuseUI from 'muse-ui'
 import 'muse-ui/dist/muse-ui.css'
+import FastClick from 'fastclick'
 // import 'muse-ui/dist/theme-dark.css'
 
 Vue.use(MuseUI)
+FastClick.attach(document.body)
 
 Vue.config.productionTip = false
 

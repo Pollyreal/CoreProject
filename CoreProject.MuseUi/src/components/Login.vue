@@ -1,8 +1,8 @@
 <template>
   <div>
-    <mu-tabs :value="'tab1'" ><!--@change="handleTabChange"-->
-      <mu-tab value="tab1" href="/login" title="Login"/>
-      <mu-tab value="tab2" href="/Search" title="Search"/>
+    <mu-tabs :value="'/login'" @change="handleTabChange"><!--@change="handleTabChange"-->
+      <mu-tab value="/login" title="Login"/>
+      <mu-tab value="/Search" title="Search"/>
       <mu-tab value="tab3" title="TAB ACTIVE"/> <!--@active="handleActive"-->
     </mu-tabs>
     <mu-breadcrumb>
@@ -27,6 +27,12 @@
   export default{
     components: {
       PngNav
+    },
+    methods: {
+      handleTabChange (val) {
+        this.activeTab = val
+        this.$router.push({ path: val })
+      }
     }
   }
 </script>
